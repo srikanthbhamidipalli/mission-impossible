@@ -12,20 +12,6 @@ import {
   LabelValue,
 } from "./styledComponents"
 
-const getValueBasedOnItsType = (value: any): string => {
-  if (value) {
-    if (typeof value === "string") {
-      return value
-    } else if (typeof value === "boolean") {
-      if (value) {
-        return "Yes"
-      }
-      return "No"
-    }
-  }
-  return "NA"
-}
-
 const renderMissionIds = (missionIds: Array<string>): React.ReactNode => {
   if (missionIds.length > 0) {
     return missionIds.map((id: string, index: number) => (
