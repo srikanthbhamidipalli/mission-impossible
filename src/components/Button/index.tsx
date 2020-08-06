@@ -3,7 +3,7 @@ import React, { useState } from "react"
 import { StyledButton } from "./styledComponents"
 
 interface ButtonProps {
-  onClick: (value: string) => void
+  onClick: (value: any) => void
   text: string
   isClicked: boolean
 }
