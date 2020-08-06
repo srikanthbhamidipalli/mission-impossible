@@ -27,7 +27,7 @@ export const CardLabel = styled.span`
 `
 
 export const ImageContainer = styled.div`
-  width: 150px;
+  flex: 1;
   height: 150px;
   align-items: center;
   justify-content: center;
