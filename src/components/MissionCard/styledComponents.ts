@@ -4,6 +4,7 @@ export const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
   width: 176px;
   max-height: 380px;
   padding: 15px;
@@ -14,8 +15,8 @@ export const CardContainer = styled.div`
   border-radius: 7px;
   box-sizing: border-box;
   overflow: auto;
-  @media (min-width: 1200px) {
-    width: 220px;
+  @media (min-width: 1180px) {
+    width: 200px;
     padding: 20px;
   }
 `
@@ -28,7 +29,9 @@ export const CardLabel = styled.span`
 
 export const ImageContainer = styled.div`
   flex: 1;
+  align-self: center;
   height: 150px;
+  display: flex;
   align-items: center;
   justify-content: center;
   background-color: lightgrey;
