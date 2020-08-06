@@ -42,7 +42,10 @@ const MissionCard = (props: MissionCardProps) => {
   return (
     <CardContainer>
       <ImageContainer>
-        <Image src={mission.links.mission_patch} />
+        <Image
+          src={mission.links.mission_patch}
+          alt={`${mission.mission_name} image`}
+        />
       </ImageContainer>
       <MissionName>{`${mission.mission_name} #${mission.flight_number}`}</MissionName>
       <CardLabel>{`Mission Ids :`}</CardLabel>

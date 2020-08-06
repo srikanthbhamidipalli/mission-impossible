@@ -5,6 +5,7 @@ export const CardContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
   width: 176px;
+  max-height: 380px;
   padding: 15px;
   margin: 10px;
   margin-right: 5px;
@@ -12,6 +13,7 @@ export const CardContainer = styled.div`
   background-color: white;
   border-radius: 7px;
   box-sizing: border-box;
+  overflow: auto;
   @media (min-width: 1200px) {
     width: 220px;
     padding: 20px;
@@ -19,13 +21,14 @@ export const CardContainer = styled.div`
 `
 
 export const CardLabel = styled.span`
-  font-size: 13px;
-  font-weight: 800;
+  font-size: 12px;
+  font-weight: bold;
   text-align: center;
 `
 
 export const ImageContainer = styled.div`
-  flex: 1;
+  width: 150px;
+  height: 150px;
   align-items: center;
   justify-content: center;
   background-color: lightgrey;
@@ -33,8 +36,9 @@ export const ImageContainer = styled.div`
 `
 
 export const Image = styled.img`
-  width: 100%;
-  height: 100%;
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
 `
 
 export const MissionName = styled.span`

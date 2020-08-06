@@ -12,6 +12,7 @@ import {
   Footer,
   FooterLabel,
   Name,
+  MessageContainer,
 } from "./styledComponents"
 import {
   getLandSuccess,
@@ -56,7 +57,7 @@ export default function App() {
         />
       ))
     }
-    return <>{`No missions found.`}</>
+    return <MessageContainer>{`No missions found.`}</MessageContainer>
   }
 
   return (
@@ -72,7 +73,11 @@ export default function App() {
           onClickSuccessFulLaunch={setIsLaunchSuccess}
         />
         <MissionsContainer>
-          {isLoading ? "Loading missions..." : renderMissions()}
+          {isLoading ? (
+            <MessageContainer>{`Loading missions...`}</MessageContainer>
+          ) : (
+            renderMissions()
+          )}
         </MissionsContainer>
       </ContentContainer>
       <Footer>

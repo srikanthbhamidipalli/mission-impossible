@@ -43,8 +43,6 @@ export const Footer = styled.footer`
 export const MissionsContainer = styled.div`
   display: flex;
   flex: 1;
-  align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
   max-width: 1037px;
   @media (max-width: 700px) {
@@ -54,6 +52,13 @@ export const MissionsContainer = styled.div`
   @media (min-width: 700px) and (max-width: 1023px) {
     max-width: 514px;
   }
+`
+
+export const MessageContainer = styled.span`
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
 `
 
 export const FooterLabel = styled.h3`
