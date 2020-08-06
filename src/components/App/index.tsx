@@ -27,24 +27,18 @@ export default function App() {
   const [isLaunchSuccess, setIsLaunchSuccess] = useState<any>(null)
   const [isLandingSuccess, setIsLandingSuccess] = useState<any>(null)
 
-  async function fetchData() {
-    setIsLoading(true)
-    console.log(
-      `https://api.spacexdata.com/v3/launches?limit=100${getLaunchSuccess(
-        isLaunchSuccess
-      )}${getLandSuccess(isLandingSuccess)}${getLaunchYear(launchYear)}`
-    )
-    const res = await fetch(
-      `https://api.spacexdata.com/v3/launches?limit=100${getLaunchSuccess(
-        isLaunchSuccess
-      )}${getLandSuccess(isLandingSuccess)}${getLaunchYear(launchYear)}`
-    )
-    const response = await res.json()
-    setData(response)
-    setIsLoading(false)
-  }
-
   useEffect(() => {
+    async function fetchData() {
+      setIsLoading(true)
+      const res = await fetch(
+        `https://api.spacexdata.com/v3/launches?limit=100${getLaunchSuccess(
+          isLaunchSuccess
+        )}${getLandSuccess(isLandingSuccess)}${getLaunchYear(launchYear)}`
+      )
+      const response = await res.json()
+      setData(response)
+      setIsLoading(false)
+    }
     fetchData()
   }, [launchYear, isLandingSuccess, isLaunchSuccess])
 
@@ -63,7 +57,7 @@ export default function App() {
   return (
     <Container>
       <Header>
-        <Heading>SpaceX Launch Programs</Heading>
+        <Heading>{`SpaceX Launch Programs`}</Heading>
       </Header>
 
       <ContentContainer>
@@ -81,8 +75,8 @@ export default function App() {
         </MissionsContainer>
       </ContentContainer>
       <Footer>
-        <FooterLabel>Developed by:</FooterLabel>
-        <Name>Srikanth</Name>
+        <FooterLabel>{`Developed by:`}</FooterLabel>
+        <Name>{`Srikanth`}</Name>
       </Footer>
     </Container>
   )
