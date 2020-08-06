@@ -1,5 +1,7 @@
 import React from "react"
 
+import { getValueBasedOnItsType } from "../../utils/CardUtils"
+
 import {
   CardContainer,
   ImageContainer,
@@ -35,7 +37,7 @@ interface MissionCardProps {
   mission: any
 }
 
-const MissionCard = (props: MissionCardProps): React.ReactNode => {
+const MissionCard = (props: MissionCardProps) => {
   const { mission } = props
   return (
     <CardContainer>
